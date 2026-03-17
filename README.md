@@ -193,7 +193,14 @@ To use this tutorial, follow these steps:
 
 1.  **Prepare the Environment**:
     Create a virtual environment and install the dependencies from `requirements.py`.
-    > **Exemple using python venv**: `python -m venv venv_hpo_raytune`
+    *Exemple using python venv:*
+    ```bash
+    python -m venv venv_hpo_raytune
+    source ./venv_hpo_raytune/bin/activate
+    pip install -r requirements.py
+    deactivate
+    ```
+
 
 2.  **Configure Paths**:
     Update the `STORAGE_PATH` in `ray_tune.py` and the `#SBATCH` output paths in `launch_ray_tune.slurm` to point to your specific project directories on `/lustre` or `$SCRATCH`.
