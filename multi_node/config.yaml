@@ -1,0 +1,23 @@
+# Configuration 
+# Ray tune configuration
+tune:
+  experiment_name: "ray_tune_multinode_jeanzay"
+  num_samples: 100  # Number of trials to be launched (trainings & evaluation) Be carefull with high numbers
+  resources_per_trial:
+    cpu: 10        # Number of CPU allocated per trials
+    gpu: 1         # Number of GPU allocated per trials
+  max_concurrent_trials:
+    num_nodes: 2
+    num_gpu_per_node: 4
+
+# Hyerparamters to try within ranges
+hyperparameters:
+  lr_min: 1e-4
+  lr_max: 1e-1
+  batch_size: [16, 32, 64]
+  epochs: 50
+
+# Searching algorithm
+search:
+  metric: "accuracy"     # The metric/score that guides the search (ex: 'auc', 'accuracy'...)
+  mode : "max"      # Can me maximizing "max" or minimizing "min" depending on the metric you selected

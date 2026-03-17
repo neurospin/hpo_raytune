@@ -1,0 +1,9 @@
+PyYAML
+numpy
+pandas
+scikit-learn
+torch
+tensorboard
+optuna
+ray[tune]
+pydantic
