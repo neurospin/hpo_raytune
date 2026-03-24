@@ -1,0 +1,52 @@
+╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Trial name                    status                lr     batch_size     iter     total time (s)     accuracy │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ train_and_evaluate_da138796   TERMINATED   0.00120614              16        1            2.24338     0.850877 │
+│ train_and_evaluate_3a81efc1   TERMINATED   0.0351079               16        2            2.31606     0.938596 │
+│ train_and_evaluate_a5300ae1   TERMINATED   0.0308564               16        1            2.29065     0.938596 │
+│ train_and_evaluate_4d3b1774   TERMINATED   0.0328463               16        1            2.2897      0.947368 │
+│ train_and_evaluate_721d0a0d   TERMINATED   0.0909334               16        2            2.25712     0.95614  │
+│ train_and_evaluate_8a52fb0f   TERMINATED   0.0933332               16        2            2.28507     0.859649 │
+│ train_and_evaluate_c75cc3ab   TERMINATED   0.00453306              16        1            2.23347     0.929825 │
+│ train_and_evaluate_3c1d9ea7   TERMINATED   0.00652833              32        1            2.27077     0.929825 │
+│ train_and_evaluate_5fcd2878   TERMINATED   0.000644618             32        1            2.24461     0.921053 │
+│ train_and_evaluate_6a6fdd13   TERMINATED   0.0131168               32        2            2.29267     0.973684 │
+│ train_and_evaluate_2286db77   TERMINATED   0.0710772               16       50            3.36854     0.991228 │
+│ train_and_evaluate_bb5cb43c   TERMINATED   0.0658657               32        8            2.40282     0.947368 │
+│ train_and_evaluate_4a13c29b   TERMINATED   0.00214379              16        1            2.32548     0.938596 │
+│ train_and_evaluate_c7045ff6   TERMINATED   0.000537833             64        1            2.27279     0.605263 │
+│ train_and_evaluate_3a30c500   TERMINATED   0.00011266              16        1            2.24397     0.77193  │
+│ train_and_evaluate_84631e42   TERMINATED   0.0305823               64        2            2.30264     0.964912 │
+│ train_and_evaluate_dfbc451e   TERMINATED   0.0158104               32        1            4.16016     0.947368 │
+│ train_and_evaluate_4ef60cc9   TERMINATED   0.0982125               16       50            5.53284     0.973684 │
+│ train_and_evaluate_1b350274   TERMINATED   0.00207516              64       50            2.62594     0.973684 │
+│ train_and_evaluate_2f1f085a   TERMINATED   0.0104371               64        8            2.33394     0.973684 │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+[Ray Tune] Calculating number of trials correctly terminated : 20
+
+================================================================================
+OPTIMIZATION RESULTS
+================================================================================
+Total trials expected: 20
+Trials completed: 20
+================================================================================
+
+
+================================================================================
+[Ray Tune] All trials completed !
+
+================================================================================
+BEST RESULTS
+================================================================================
+Best config: {'lr': 0.07107724489252641, 'batch_size': 16, 'epochs': 50, 'metric': 'accuracy', 'mode': 'max'}
+Best accuracy: 0.9912
+================================================================================
+
+[36m(train_and_evaluate pid=1636428)[0m [Trial 2f1f085a] Epoch 08/50 | Loss: 0.1007 | Accuracy: 0.9737[32m [repeated 8x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+Ray Tune finished with exit code: 0
+========================================
+Ray Tune finished with exit code: 0
+Timestamp: Tue Mar 17 15:58:44 CET 2026
+========================================
+Ray Tune completed successfully → No need to automatically requeue the job!
